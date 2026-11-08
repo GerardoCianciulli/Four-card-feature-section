@@ -28,7 +28,7 @@ Your users should be able to:
 
 ### Links
 
-- Live Site URL: [github pages](https://gerardocianciulli.github.io/four-card-feature-section/)
+- Live Site URL: [github pages](https://gerardocianciulli.github.io/Four-card-feature-section/)
 
 ## My process
 
