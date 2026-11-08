@@ -1,0 +1,106 @@
+/* ---------- Desktop (1440px design) ---------- */
+
+.features {
+  padding: 102px 16px 163px;
+}
+
+.features__header {
+  max-width: 540px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.features__title {
+  font-size: var(--fs-preset-1);
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+  color: var(--grey-500);
+}
+
+.features__title-light,
+.features__title-bold {
+  display: block;
+}
+
+.features__title-light {
+  font-weight: var(--fw-extra-light);
+}
+
+.features__title-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.features__intro {
+  margin-top: 16px;
+  font-size: var(--fs-preset-4);
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  color: var(--grey-500);
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-areas:
+    'supervisor team-builder calculator'
+    'supervisor karma        calculator';
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 74px;
+}
+
+.features__item--supervisor {
+  grid-area: supervisor;
+}
+
+.features__item--team-builder {
+  grid-area: team-builder;
+}
+
+.features__item--karma {
+  grid-area: karma;
+}
+
+.features__item--calculator {
+  grid-area: calculator;
+}
+
+/* ---------- Tablet (768px design) ---------- */
+
+@media (max-width: 1160px) {
+  .features {
+    padding-block: 80px;
+  }
+
+  /* Four 141px tracks: each 314px card spans two, so single cards sit centred */
+  .features__list {
+    grid-template-columns: repeat(4, 141px);
+    grid-template-areas:
+      '.            supervisor   supervisor .'
+      'team-builder team-builder karma      karma'
+      '.            calculator   calculator .';
+  }
+}
+
+/* ---------- Mobile (375px design) ---------- */
+
+@media (max-width: 720px) {
+  .features {
+    padding: 56px 16px 46px;
+  }
+
+  .features__header {
+    max-width: 316px;
+  }
+
+  .features__list {
+    grid-template-columns: minmax(0, 314px);
+    grid-template-areas:
+      'supervisor'
+      'team-builder'
+      'karma'
+      'calculator';
+    margin-top: 60px;
+  }
+}
